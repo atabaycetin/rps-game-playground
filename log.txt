@@ -1,0 +1,10 @@
+Issue: For some reason it keeps choosing counter_last for Quincy
+Reason: Only last used strategy is updated in the rewards dictionary
+Solution: Keep tracking rewards for all strategies simultaneously
+          To do this, I need to track guesses of all strategies for
+          the previous rounds
+--------------------------------------------------------------------------
+Issue: Even though a cycle is found, the prediction is wrong
+Reason: It uses the same strategy continuously because the reward of that particular
+        strategy is maximized after many games
+Solution: Reset the strategy rewards when the win rate is too high or rewards go too high
