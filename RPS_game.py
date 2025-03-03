@@ -1,7 +1,6 @@
 # DO NOT MODIFY THIS FILE
 
 import random
-from RPS import strat_pick
 
 
 def play(player1, player2, num_games, verbose=False):
@@ -28,7 +27,6 @@ def play(player1, player2, num_games, verbose=False):
         if verbose:
             print("Player 1:", p1_play, "| Player 2:", p2_play)
             print(winner)
-
             print()
 
         p1_prev_play = p1_play
